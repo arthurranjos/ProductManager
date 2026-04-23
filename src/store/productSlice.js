@@ -29,15 +29,11 @@ const productSlice = createSlice({
     },
 
     clearForm: (state) => {
-      state.form = initialState.form
+      state.form = { ...initialState.form }
     },
   },
 })
 
-export const {
-  updateField,
-  addProduct,
-  clearForm,
-} = productSlice.actions
+export const { updateField, addProduct, clearForm } = productSlice.actions
 
 export default productSlice.reducer
